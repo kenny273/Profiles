@@ -141,7 +141,6 @@ USER-AGENT,AVOS*,REJECT
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading REJECT-DICT
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config REJECT-DICT
 ^https?:\/\/api\.zhihu\.com\/me\/guides REJECT-DICT
-^https?:\/\/api\.zhihu\.com\/moments\/recent REJECT-DICT
 ^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 REJECT-DICT
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
