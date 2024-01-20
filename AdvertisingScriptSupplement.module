@@ -1,0 +1,130 @@
+#!name=AdvertisingScriptSupplement
+#!desc=脚本去广告策略补充
+#!author=kenny273
+
+[Rule]
+DOMAIN-SUFFIX,miaozhen.com,REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,-tos.pstatp.com,REJECT
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
+DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
+DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
+DOMAIN，toblog.ctobsnssdk.com,REJECT
+DOMAIN-KEYWORD,volc,REJECT
+DOMAIN-KEYWORD,baihemob,REJECT
+DOMAIN-KEYWORD,beizi.biz,REJECT
+DOMAIN，118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
+#DOMAIN，toblog.volceapplog.com,DIRECT
+USER-AGENT,AVOS*,REJECT
+DOMAIN-SUFFIX,4009997658.com,REJECT
+DOMAIN-SUFFIX,abbyychina.com,REJECT
+DOMAIN-SUFFIX,bartender.cc,REJECT
+DOMAIN-SUFFIX,betterzip.net,REJECT
+DOMAIN-SUFFIX,betterzipcn.com,REJECT
+DOMAIN-SUFFIX,beyondcompare.cc,REJECT
+DOMAIN-SUFFIX,bingdianhuanyuan.cn,REJECT
+DOMAIN-SUFFIX,chemdraw.com.cn,REJECT
+DOMAIN-SUFFIX,cjmakeding.com,REJECT
+DOMAIN-SUFFIX,cjmkt.com,REJECT
+DOMAIN-SUFFIX,codesoftchina.com,REJECT
+DOMAIN-SUFFIX,coreldrawchina.com,REJECT
+DOMAIN-SUFFIX,crossoverchina.com,REJECT
+DOMAIN-SUFFIX,dongmansoft.com,REJECT
+DOMAIN-SUFFIX,earmasterchina.cn,REJECT
+DOMAIN-SUFFIX,easyrecoverychina.com,REJECT
+DOMAIN-SUFFIX,ediuschina.com,REJECT
+DOMAIN-SUFFIX,flstudiochina.com,REJECT
+DOMAIN-SUFFIX,formysql.com,REJECT
+DOMAIN-SUFFIX,guitarpro.cc,REJECT
+DOMAIN-SUFFIX,huishenghuiying.com.cn,REJECT
+DOMAIN-SUFFIX,hypersnap.net,REJECT
+DOMAIN-SUFFIX,iconworkshop.cn,REJECT
+DOMAIN-SUFFIX,imindmap.cc,REJECT
+DOMAIN-SUFFIX,jihehuaban.com.cn,REJECT
+DOMAIN-SUFFIX,keyshot.cc,REJECT
+DOMAIN-SUFFIX,kingdeecn.cn,REJECT
+DOMAIN-SUFFIX,logoshejishi.com,REJECT
+DOMAIN-SUFFIX,luping.net.cn,REJECT
+DOMAIN-SUFFIX,mairuan.cn,REJECT
+DOMAIN-SUFFIX,mairuan.com,REJECT
+DOMAIN-SUFFIX,mairuan.com.cn,REJECT
+DOMAIN-SUFFIX,mairuan.net,REJECT
+DOMAIN-SUFFIX,mairuanwang.com,REJECT
+DOMAIN-SUFFIX,makeding.com,REJECT
+DOMAIN-SUFFIX,mathtype.cn,REJECT
+DOMAIN-SUFFIX,mindmanager.cc,REJECT
+DOMAIN-SUFFIX,mindmanager.cn,REJECT
+DOMAIN-SUFFIX,mindmapper.cc,REJECT
+DOMAIN-SUFFIX,mycleanmymac.com,REJECT
+DOMAIN-SUFFIX,nicelabel.cc,REJECT
+DOMAIN-SUFFIX,ntfsformac.cc,REJECT
+DOMAIN-SUFFIX,ntfsformac.cn,REJECT
+DOMAIN-SUFFIX,overturechina.com,REJECT
+DOMAIN-SUFFIX,passwordrecovery.cn,REJECT
+DOMAIN-SUFFIX,pdfexpert.cc,REJECT
+DOMAIN-SUFFIX,photozoomchina.com,REJECT
+DOMAIN-SUFFIX,shankejingling.com,REJECT
+DOMAIN-SUFFIX,ultraiso.net,REJECT
+DOMAIN-SUFFIX,vegaschina.cn,REJECT
+DOMAIN-SUFFIX,xmindchina.net,REJECT
+DOMAIN-SUFFIX,xshellcn.com,REJECT
+DOMAIN-SUFFIX,yihuifu.cn,REJECT
+DOMAIN-SUFFIX,yuanchengxiezuo.com,REJECT
+DOMAIN-SUFFIX,zbrushcn.com,REJECT
+DOMAIN-SUFFIX,zhzzx.com,REJECT
+DOMAIN-SUFFIX,push.apple.com,DIRECT
+DOMAIN,identity.apple.com,DIRECT
+IP-CIDR,17.0.0.0/8,DIRECT
+IP-CIDR,17.249.0.0/16,DIRECT
+IP-CIDR,17.252.0.0/16,DIRECT
+IP-CIDR,17.57.144.0/22,DIRECT
+IP-CIDR,17.188.128.0/18,DIRECT
+IP-CIDR,17.188.20.0/23,DIRECT
+DOMAIN,sdkapp.uve.weibo.com,DIRECT
+DOMAIN-SUFFIX,u3.ucweb.com,REJECT
+DOMAIN,amdc.m.taobao.com,REJECT
+DOMAIN,gg.caixin.com,DIRECT
+DOMAIN,ntb.lanjie100.com,REJECT
+DOMAIN-SUFFIX,kuwo.cn,DIRECT
+IP-CIDR,180.76.76.200/32,REJECT
+DOMAIN-KEYWORD,pangolin,REJECT
+DOMAIN-KEYWORD,pglstatp,REJECT
+IP-CIDR,180.76.76.200/32,REJECT
+DOMAIN,im.tieba.baidu.com,REJECT
+DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
+DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
+DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
+DOMAIN-SUFFIX,95599.cn,DIRECT
+DOMAIN-SUFFIX,abchina.com,DIRECT
+DOMAIN-SUFFIX,bscabank.com,DIRECT
+DOMAIN-SUFFIX,openaboc.cn,DIRECT
+DOMAIN-SUFFIX,openaboc.com,DIRECT
+DOMAIN-SUFFIX,openaboc.com.cn,DIRECT
+DOMAIN,d.image.i4.cn,REJECT
+IP-CIDR,203.107.1.1/24,REJECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,224.0.0.0/24,DIRECT
+IP-CIDR,182.254.116.0/24,DIRECT
+
+[URL Rewrite]
+^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet reject-200 
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? reject-dict 
+^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads reject 
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict 
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl reject-dict 
+
+[Script]
+mygolbus = type=http-response,pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhangshanggongjiao.js
+12306 = type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
+weibointljson = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibointljson2 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibointljson3 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibointljson4 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibointljson5 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
