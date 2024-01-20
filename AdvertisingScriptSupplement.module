@@ -176,11 +176,12 @@ WeiboIntljson2 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c
 WeiboIntljson3 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson4 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson5 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-zheye.min=type=http-response,pattern=^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye.min1=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/next-(data|bff|render),requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye.min2=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye.min3=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye.min4=type=http-response,pattern=^https:\/\/api\.zhihu\.com\/topstory\/recommend,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye=type=http-response,pattern=^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye1=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/next-(data|bff|render),requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye2=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye3=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye4=type=http-response,pattern=^https:\/\/api\.zhihu\.com\/topstory\/recommend,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye5=type=http-response,pattern=^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/resource,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
 [MITM]
 hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
