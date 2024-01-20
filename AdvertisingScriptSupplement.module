@@ -11,7 +11,6 @@ DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
 DOMAIN,im.tieba.baidu.com,REJECT
 DOMAIN,ntb.lanjie100.com,REJECT
 DOMAIN,open.e.kuaishou.com,REJECT
-DOMAIN,ulogs.umeng.com,REJECT
 DOMAIN-KEYWORD,118.89.204.198,REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
@@ -59,6 +58,7 @@ DOMAIN-SUFFIX,mairuan.net,REJECT
 DOMAIN-SUFFIX,mairuanwang.com,REJECT
 DOMAIN-SUFFIX,makeding.com,REJECT
 DOMAIN-SUFFIX,mathtype.cn,REJECT
+DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,mindmanager.cc,REJECT
 DOMAIN-SUFFIX,mindmanager.cn,REJECT
 DOMAIN-SUFFIX,mindmapper.cc,REJECT
@@ -73,6 +73,8 @@ DOMAIN-SUFFIX,photozoomchina.com,REJECT
 DOMAIN-SUFFIX,shankejingling.com,REJECT
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,ultraiso.net,REJECT
+DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,umengcloud.com,REJECT
 DOMAIN-SUFFIX,vegaschina.cn,REJECT
 DOMAIN-SUFFIX,xmindchina.net,REJECT
 DOMAIN-SUFFIX,xshellcn.com,REJECT
