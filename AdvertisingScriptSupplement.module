@@ -101,13 +101,42 @@ USER-AGENT,AVOS*,REJECT
 ^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
 ^https://app.bilibili.com/x/v2/search/defaultwords - REJECT-DICT
 ^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) REJECT-DICT
+^https:\/\/api\.zhihu\.com\/comment_v5\/answers\/\d+\/list-headers REJECT-DICT
+^https:\/\/api\.zhihu\.com\/commercial_api\/(banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) REJECT-DICT
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? REJECT-DICT
+^https:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading REJECT-DICT
+^https:\/\/api\.zhihu\.com\/me\/guides REJECT-DICT
+^https:\/\/api\.zhihu\.com\/root\/window REJECT-DICT
+^https:\/\/api\.zhihu\.com\/search\/preset_words REJECT-DICT
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card REJECT
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation REJECT-DICT
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp REJECT-DICT
+^https:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings REJECT
+^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation REJECT
+^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/v2\/linkcards\? REJECT
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/article\/\d+ REJECT-DICT
+^https:\/\/www\.zhihu\.com\/appview\/v2\/zhmore REJECT
+^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner REJECT
+^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation REJECT
+^https?://api\.zhihu\.com/\w+/\d+/comments/featured-comment-ad REJECT
+^https?://api\.zhihu\.com/ad REJECT
+^https?://api\.zhihu\.com/appview/api/v\d/answers/\d+/recommendations REJECT
+^https?://api\.zhihu\.com/commercial_api/ REJECT
 ^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
+^https?://www\.zhihu\.com/api/v\d/answers/\d+/recommendations REJECT
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch REJECT-DICT
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - REJECT
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - REJECT-DICT
 ^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl REJECT-DICT 
+^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\? REJECT-DICT
+^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading REJECT-DICT
+^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config REJECT-DICT
+^https?:\/\/api\.zhihu\.com\/me\/guides REJECT-DICT
+^https?:\/\/api\.zhihu\.com\/moments\/recent REJECT-DICT
+^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 REJECT-DICT
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - REJECT-DICT
@@ -116,6 +145,8 @@ USER-AGENT,AVOS*,REJECT
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - REJECT-DICT
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet REJECT-200 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users REJECT-DICT
+^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations REJECT-DICT
+^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\? REJECT-DICT
 
 [Script]
 12306 = type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
@@ -145,6 +176,11 @@ WeiboIntljson2 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c
 WeiboIntljson3 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson4 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson5 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+zheye.min=type=http-response,pattern=^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye.min1=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/next-(data|bff|render),requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye.min2=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye.min3=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+zheye.min4=type=http-response,pattern=^https:\/\/api\.zhihu\.com\/topstory\/recommend,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
 [MITM]
 hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
