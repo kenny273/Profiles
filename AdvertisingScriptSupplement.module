@@ -74,8 +74,7 @@ DOMAIN-SUFFIX,shankejingling.com,REJECT
 DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,ultraiso.net,REJECT
-DOMAIN-SUFFIX,umeng.com,REJECT
-DOMAIN-SUFFIX,umengcloud.com,REJECT
+DOMAIN-SUFFIX,uyunad.com,REJECT
 DOMAIN-SUFFIX,vegaschina.cn,REJECT
 DOMAIN-SUFFIX,xmindchina.net,REJECT
 DOMAIN-SUFFIX,xshellcn.com,REJECT
@@ -186,8 +185,6 @@ zheye1=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/next-(data|bff|re
 zheye2=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 zheye3=type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 zheye4=type=http-response,pattern=^https:\/\/api\.zhihu\.com\/topstory\/recommend,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye5=type=http-response,pattern=^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/resource\?group_name,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-zheye6=type=http-response,pattern=^https?:\/\/m-cloud\.zhihu\.com\/api\/apm\/sampling\/get\?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
 [MITM]
 hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
