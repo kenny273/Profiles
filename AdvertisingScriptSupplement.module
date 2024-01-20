@@ -34,6 +34,7 @@ DOMAIN-SUFFIX,cjmkt.com,REJECT
 DOMAIN-SUFFIX,codesoftchina.com,REJECT
 DOMAIN-SUFFIX,coreldrawchina.com,REJECT
 DOMAIN-SUFFIX,crossoverchina.com,REJECT
+DOMAIN-SUFFIX,ctrmi.cn,REJECT
 DOMAIN-SUFFIX,dongmansoft.com,REJECT
 DOMAIN-SUFFIX,earmasterchina.cn,REJECT
 DOMAIN-SUFFIX,easyrecoverychina.com,REJECT
