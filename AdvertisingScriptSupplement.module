@@ -75,6 +75,7 @@ DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 DOMAIN-SUFFIX,shuzilm.cn,REJECT
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,ultraiso.net,REJECT
+DOMAIN-SUFFIX,umeng.com,REJECT
 DOMAIN-SUFFIX,uyunad.com,REJECT
 DOMAIN-SUFFIX,vegaschina.cn,REJECT
 DOMAIN-SUFFIX,xmindchina.net,REJECT
