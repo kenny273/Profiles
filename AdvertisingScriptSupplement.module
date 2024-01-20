@@ -104,6 +104,7 @@ USER-AGENT,AVOS*,REJECT
 ^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch REJECT-DICT
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - REJECT
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - REJECT-DICT
 ^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl REJECT-DICT 
@@ -131,6 +132,11 @@ biliad10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\
 biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
 biliad12=type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
 biliad13=type=http-response,pattern=^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$,requires-body=1,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
+coolapk=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+coolapk1=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+coolapk2=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+coolapk3=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+coolapk4=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/dataList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 Mygolbus = type=http-response,pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhangshanggongjiao.js
 WeChatOfficialAccounts=type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 WeiboIntljson = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
