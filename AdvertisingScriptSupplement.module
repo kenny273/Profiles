@@ -10,7 +10,6 @@ DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
 DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
 DOMAIN,im.tieba.baidu.com,REJECT
 DOMAIN,ntb.lanjie100.com,REJECT
-DOMAIN,open.kuaishouzt.com,REJECT
 DOMAIN-KEYWORD,118.89.204.198,REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
