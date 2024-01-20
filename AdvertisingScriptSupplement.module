@@ -111,6 +111,7 @@ USER-AGENT,AVOS*,REJECT
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity - REJECT-DICT
+^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash REJECT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? REJECT-DICT 
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - REJECT-DICT
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet REJECT-200 
@@ -146,4 +147,4 @@ WeiboIntljson4 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c
 WeiboIntljson5 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
-hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
