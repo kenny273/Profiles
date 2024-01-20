@@ -1,0 +1,6 @@
+#!name=Skip Proxy
+#!desc=规避代理检测
+#!author=kenny273
+
+[General]
+skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,seed-sequoia.siri.apple.com,sequoia.apple.com,www.abchina.com.cn,www.baidu.com,www.shanbay.com,wxh.wo.cn,yunbusiness.ccb.com
