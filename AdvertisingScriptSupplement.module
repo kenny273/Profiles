@@ -106,9 +106,13 @@ USER-AGENT,AVOS*,REJECT
 
 [URL Rewrite]
 (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+)-302$1$3
-^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
 ^https://app.bilibili.com/x/v2/search/defaultwords - REJECT-DICT
 ^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default REJECT
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report REJECT-DICT
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip REJECT
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) REJECT-DICT
 ^https:\/\/api\.zhihu\.com\/comment_v5\/answers\/\d+\/list-headers REJECT-DICT
 ^https:\/\/api\.zhihu\.com\/commercial_api\/(banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) REJECT-DICT
@@ -157,20 +161,24 @@ USER-AGENT,AVOS*,REJECT
 
 [Script]
 12306=type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
-biliad=type=http-response,pattern=^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Rewrite/Function/Bilibili_CC.conf
-biliad1=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad2=type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad3=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad4=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad5=type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad6=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad7=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad8=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad9=type=http-response,pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
-biliad12=type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
-biliad13=type=http-response,pattern=^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$,requires-body=1,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
+biliad=type=http-response,pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad1=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad2=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad3=type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad4=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad5=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad6=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad7=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad8=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad12=type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad13=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad14=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad15=type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad16=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad17=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 coolapk=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 coolapk1=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 coolapk2=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
