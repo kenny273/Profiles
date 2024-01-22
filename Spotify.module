@@ -1,5 +1,5 @@
 #!name=Spotify
-#!desc=Spotify部分解锁
+#!desc=Spotify解锁
 
 [MITM]
 hostname = %APPEND% spclient.wg.spotify.com
