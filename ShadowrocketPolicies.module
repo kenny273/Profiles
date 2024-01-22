@@ -8,6 +8,8 @@ skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-s
 [Rule]
 DOMAIN,118.89.204.198,REJECT
 DOMAIN,ad.12306.cn,REJECT
+DOMAIN,api.imem.app
+DOMAIN,api.swiftgram.app
 DOMAIN,d.image.i4.cn,REJECT
 DOMAIN,emby.aca.best,🎬 Emby
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
@@ -21,6 +23,7 @@ DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
 DOMAIN-KEYWORD,baihemob,REJECT
 DOMAIN-KEYWORD,beizi.biz,REJECT
+DOMAIN-KEYWORD,nicegram
 DOMAIN-KEYWORD,pangolin,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
 DOMAIN-KEYWORD,pglstatp,REJECT
@@ -38,6 +41,8 @@ DOMAIN-SUFFIX,chemdraw.com.cn,REJECT
 DOMAIN-SUFFIX,cjmakeding.com,REJECT
 DOMAIN-SUFFIX,cjmkt.com,REJECT
 DOMAIN-SUFFIX,codesoftchina.com,REJECT
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,contest.com
 DOMAIN-SUFFIX,coreldrawchina.com,REJECT
 DOMAIN-SUFFIX,crossoverchina.com,REJECT
 DOMAIN-SUFFIX,ctrmi.cn,REJECT
@@ -47,6 +52,7 @@ DOMAIN-SUFFIX,easyrecoverychina.com,REJECT
 DOMAIN-SUFFIX,ediuschina.com,REJECT
 DOMAIN-SUFFIX,flstudiochina.com,REJECT
 DOMAIN-SUFFIX,formysql.com,REJECT
+DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,guitarpro.cc,REJECT
 DOMAIN-SUFFIX,huishenghuiying.com.cn,REJECT
 DOMAIN-SUFFIX,hypersnap.net,REJECT
@@ -55,6 +61,7 @@ DOMAIN-SUFFIX,imindmap.cc,REJECT
 DOMAIN-SUFFIX,jihehuaban.com.cn,REJECT
 DOMAIN-SUFFIX,keyshot.cc,REJECT
 DOMAIN-SUFFIX,kingdeecn.cn,REJECT
+DOMAIN-SUFFIX,legra.ph
 DOMAIN-SUFFIX,logoshejishi.com,REJECT
 DOMAIN-SUFFIX,luping.net.cn,REJECT
 DOMAIN-SUFFIX,mairuan.cn,REJECT
@@ -64,6 +71,7 @@ DOMAIN-SUFFIX,mairuan.net,REJECT
 DOMAIN-SUFFIX,mairuanwang.com,REJECT
 DOMAIN-SUFFIX,makeding.com,REJECT
 DOMAIN-SUFFIX,mathtype.cn,REJECT
+DOMAIN-SUFFIX,mbrx.app
 DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,mindmanager.cc,REJECT
 DOMAIN-SUFFIX,mindmanager.cn,REJECT
@@ -77,12 +85,28 @@ DOMAIN-SUFFIX,overturechina.com,REJECT
 DOMAIN-SUFFIX,passwordrecovery.cn,REJECT
 DOMAIN-SUFFIX,pdfexpert.cc,REJECT
 DOMAIN-SUFFIX,photozoomchina.com,REJECT
+DOMAIN-SUFFIX,quiz.directory
 DOMAIN-SUFFIX,shankejingling.com,REJECT
 DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 DOMAIN-SUFFIX,shuzilm.cn,REJECT
+DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,telegram.dog
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,telegramdownload.com
+DOMAIN-SUFFIX,telesco.pe
+DOMAIN-SUFFIX,tg.dev
+DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,ultraiso.net,REJECT
 DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-SUFFIX,uyunad.com,REJECT
 DOMAIN-SUFFIX,vegaschina.cn,REJECT
 DOMAIN-SUFFIX,xmindchina.net,REJECT
@@ -91,8 +115,15 @@ DOMAIN-SUFFIX,yihuifu.cn,REJECT
 DOMAIN-SUFFIX,yuanchengxiezuo.com,REJECT
 DOMAIN-SUFFIX,zbrushcn.com,REJECT
 DOMAIN-SUFFIX,zhzzx.com,REJECT
+IP-ASN,211157,no-resolve
+IP-ASN,44907,no-resolve
+IP-ASN,59930,no-resolve
+IP-ASN,62014,no-resolve
+IP-ASN,62041,no-resolve
 IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,109.239.140.0/24,no-resolve
 IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR,17.0.0.0/8,DIRECT
 IP-CIDR,17.188.128.0/18,DIRECT
 IP-CIDR,17.188.20.0/23,DIRECT
@@ -102,23 +133,29 @@ IP-CIDR,17.57.144.0/22,DIRECT
 IP-CIDR,172.16.0.0/12,DIRECT
 IP-CIDR,182.254.116.0/24,DIRECT
 IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,2001:67c:4e8::/48,no-resolve
+IP-CIDR,2001:b28:f23c::/47,no-resolve
+IP-CIDR,2001:b28:f23f::/48,no-resolve
 IP-CIDR,224.0.0.0/24,DIRECT
+IP-CIDR,2a0a:f280::/32,no-resolve
+IP-CIDR,5.28.192.0/18,no-resolve
+IP-CIDR,91.108.0.0/16,no-resolve
 
 [URL Rewrite]
 (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+)-302$1$3
 ^https://api.bilibili.com/pgc/season/player/cards REJECT-DICT
 ^https://app.bilibili.com/x/v2/splash/show REJECT-DICT
+^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default REJECT
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report REJECT-DICT
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip REJECT
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) REJECT-DICT
-^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch REJECT-DICT
 ^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl REJECT-DICT 
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip REJECT
 ^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash REJECT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? REJECT-DICT 
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) REJECT-DICT
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet REJECT-200 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users REJECT-DICT
 
