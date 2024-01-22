@@ -127,7 +127,7 @@ IP-CIDR,224.0.0.0/24,DIRECT
 biliad=type=http-response,pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad1=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad2=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad3=type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad3=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad4=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad5=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad6=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
@@ -139,7 +139,7 @@ biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\
 biliad12=type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad13=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 biliad14=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-biliad15=type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad15=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 biliad16=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 biliad17=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 coolapk=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
@@ -154,8 +154,8 @@ WeiboIntljson2=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\
 WeiboIntljson3=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson4=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 WeiboIntljson5=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson6=type=http-response,pattern=^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson7=type=http-response,pattern=^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+WeiboIntljson6=type=http-response,pattern=^https?:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+WeiboIntljson7=type=http-response,pattern=^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
 hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
