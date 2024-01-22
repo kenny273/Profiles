@@ -152,4 +152,4 @@ WeiboIntljson6=type=http-response,pattern=^https?:\/\/bootpreload\.uve\.weibo\.c
 WeiboIntljson7=type=http-response,pattern=^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [MITM]
-hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
