@@ -136,6 +136,8 @@ biliad9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/
 biliad10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 biliad12=type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+biliad13=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
+biliad14=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
 coolapk=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 coolapk1=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
 coolapk2=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
