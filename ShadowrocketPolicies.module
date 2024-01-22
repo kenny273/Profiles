@@ -107,10 +107,7 @@ IP-CIDR,224.0.0.0/24,DIRECT
 [URL Rewrite]
 (^https?:\/\/app\.biliintl.com\/intl\/.+)(&sim_code=\d+)(.+)-302$1$3
 ^https://api.bilibili.com/pgc/season/player/cards REJECT-DICT
-^https://app.bilibili.com/x/v2/splash/brand REJECT-DICT
-^https://app.bilibili.com/x/v2/splash/event REJECT-DICT
-^https://app.bilibili.com/x/v2/splash/list REJECT-DICT
-^https://app.bilibili.com/x/v2/splash/show REJECT-DICT
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/ REJECT-DICT
 ^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default REJECT
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive REJECT-DICT
