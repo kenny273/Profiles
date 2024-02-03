@@ -1,5 +1,5 @@
-#!name=ShadowrocketPolicies
-#!desc=自用分流重写策略及脚本
+#!name=PoliciesSupplement
+#!desc=策略补充
 #!author=kenny273
 
 [General]
@@ -68,7 +68,7 @@ DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,mindmanager.cc,REJECT
 DOMAIN-SUFFIX,mindmanager.cn,REJECT
 DOMAIN-SUFFIX,mindmapper.cc,REJECT
-DOMAIN-SUFFIX,misakaf.org,🎬 Emby
+DOMAIN-SUFFIX,misakaf.org,🎬 国际流媒体
 DOMAIN-SUFFIX,mycleanmymac.com,REJECT
 DOMAIN-SUFFIX,nicelabel.cc,REJECT
 DOMAIN-SUFFIX,ntfsformac.cc,REJECT
