@@ -9,13 +9,13 @@ skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-s
 DOMAIN,118.89.204.198,REJECT
 DOMAIN,ad.12306.cn,REJECT
 DOMAIN,d.image.i4.cn,REJECT
-DOMAIN,emby.aca.best,🎬 Emby
+DOMAIN,emby.aca.best,🎬 国际流媒体
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
 DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
 DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
 DOMAIN,im.tieba.baidu.com,REJECT
 DOMAIN,ntb.lanjie100.com,REJECT
-DOMAIN,porn.aca.best,🎬 Emby
+DOMAIN,porn.aca.best,🎬 国际流媒体
 DOMAIN-KEYWORD,118.89.204.198,REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
