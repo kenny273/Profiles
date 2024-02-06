@@ -93,56 +93,80 @@ DOMAIN-SUFFIX,zbrushcn.com,REJECT
 DOMAIN-SUFFIX,zhzzx.com,REJECT
 
 [URL Rewrite]
-^https://api.bilibili.com/pgc/season/player/cards REJECT-DICT
-^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/ REJECT-DICT
-^https?://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads REJECT 
-^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default REJECT
-^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive REJECT-DICT
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards REJECT-DICT
-^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report REJECT-DICT
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch REJECT-DICT
-^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl REJECT-DICT 
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip REJECT
-^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash REJECT
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? REJECT-DICT 
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) REJECT-DICT
-^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet REJECT-200 
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users REJECT-DICT
+^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
+^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
+^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) - REJECT
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards - REJECT-DICT
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - REJECT-DICT
+^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo - REJECT-DICT
+^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload - REJECT-DICT
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl - REJECT-DICT
+^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser - REJECT-DICT
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
+^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash - REJECT
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - REJECT-200
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - REJECT-DICT
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - REJECT-DICT
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - REJECT-DICT
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) - REJECT-DICT
+^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 
 [Script]
-12306=type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
-biliad=type=http-response,pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad1=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad2=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad3=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad4=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad5=type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad6=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad7=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad8=type=http-response,pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad9=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad10=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad11=type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad12=type=http-response,pattern=^https://app.bilibili.com/x/v2/search/square,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-biliad13=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-biliad14=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-biliad15=type=http-response,pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-biliad16=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-biliad17=type=http-response,pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js
-coolapk=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-coolapk1=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-coolapk2=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-coolapk3=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-coolapk4=type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/dataList,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
-Mygolbus=type=http-response,pattern=^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhangshanggongjiao.js
-WeChatOfficialAccounts=type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-WeiboIntljson=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson2=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson3=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson4=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson5=type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson6=type=http-response,pattern=^https?:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-WeiboIntljson7=type=http-response,pattern=^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json1 = type=http-response, pattern=^https://app.bilibili.com/x/v2/search/square, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json2 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json3 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json4 = type=http-response, pattern=^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json5 = type=http-response, pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json6 = type=http-response, pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json7 = type=http-response, pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json8 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json9 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json10 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json11 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_json12 = type=http-response, pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
+bilibili_proto_beta = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+bilibili_proto_beta1 = type=http-response, pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo)$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+bilibili_proto_beta2 = type=http-response, pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+bilibili_proto_beta3 = type=http-response, pattern=^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile), script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+bilibili_proto_beta4 = type=http-response, pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto_beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+coolapk = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/dataList, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk1 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk2 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk3 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk4 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+mygolbus = type=http-response, pattern=https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do, script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhangshanggongjiao.js, requires-body=true, max-size=-1, timeout=60
+wechat = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, requires-body=true, max-size=-1, timeout=60
+weibo_json = type=http-response, pattern=^https://api.weibo.cn/2/!/client/light_skin, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json1 = type=http-response, pattern=^https://new.vip.weibo.cn/littleskin/preview, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json2 = type=http-response, pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json3 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json4 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json5 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json6 = type=http-response, pattern=^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json7 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json8 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json9 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json10 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json11 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json12 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json13 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json14 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json15 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json16 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list), script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json17 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json18 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json19 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json20 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_json21 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center, script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info, script-path=http://script.hub/convert/_start_/https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_info.json/_end_/weibo_search_info.json?type=mock&target-app=shadowrocket-module, timeout=60
+weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=http://script.hub/convert/_start_/https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_topic.json/_end_/weibo_search_topic.json?type=mock&target-app=shadowrocket-module, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,grpc.biliapi.net,api.biliapi.net,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,api.biliapi.net,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,grpc.biliapi.net,mp.weixin.qq.com,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
