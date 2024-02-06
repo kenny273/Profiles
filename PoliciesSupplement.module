@@ -7,7 +7,7 @@ skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-s
 
 [Rule]
 DOMAIN,118.89.204.198,REJECT
-DOMAIN,ad.12306.cn,REJECT
+#DOMAIN,ad.12306.cn,REJECT
 DOMAIN,d.image.i4.cn,REJECT
 DOMAIN,emby.aca.best,🎬 国际流媒体
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
