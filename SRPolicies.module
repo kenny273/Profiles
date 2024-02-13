@@ -7,13 +7,13 @@ skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-s
 [Rule]
 DOMAIN,118.89.204.198,REJECT
 DOMAIN,d.image.i4.cn,REJECT
-DOMAIN,emby.aca.best,🎬 国际流媒体
+DOMAIN,emby.aca.best,🎥 Emby专线
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
 DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
 DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
 DOMAIN,im.tieba.baidu.com,REJECT
 DOMAIN,ntb.lanjie100.com,REJECT
-DOMAIN,porn.aca.best,🎬 国际流媒体
+DOMAIN,porn.aca.best,🎥 Emby专线
 DOMAIN-KEYWORD,118.89.204.198,REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
@@ -66,7 +66,7 @@ DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,mindmanager.cc,REJECT
 DOMAIN-SUFFIX,mindmanager.cn,REJECT
 DOMAIN-SUFFIX,mindmapper.cc,REJECT
-DOMAIN-SUFFIX,misakaf.org,🎬 国际流媒体
+DOMAIN-SUFFIX,misakaf.org,🎥 Emby专线
 DOMAIN-SUFFIX,mycleanmymac.com,REJECT
 DOMAIN-SUFFIX,nicelabel.cc,REJECT
 DOMAIN-SUFFIX,ntfsformac.cc,REJECT
