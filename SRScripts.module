@@ -141,7 +141,7 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 
 [Script]
-12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body=true, max-size=-1, timeout=60
+12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, max-size=-1, timeout=60
 baiducloud = type=http-response, pattern=^https?:\/\/pan\.baidu\.com\/api\/getsyscfg, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, max-size=-1, timeout=60
 baiducloud = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, max-size=-1, timeout=60
 bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
