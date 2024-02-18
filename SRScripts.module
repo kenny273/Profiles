@@ -103,6 +103,24 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
 ^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash - REJECT
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - REJECT-200
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ios\/upgrade - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/position\/show\/resource - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/scene\/show\/resource - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default\/keyword - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/rcmd\/keyword - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/specialkeyword - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/sp\/flow - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/v1\/content\/exposure\/comment - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get - REJECT-DICT
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?eapi\/resource-exposure\/config - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - REJECT-DICT
@@ -173,4 +191,4 @@ weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo
 weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_topic.json, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, interface*.music.163.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
