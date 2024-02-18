@@ -107,12 +107,17 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - REJECT-DICT
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) - REJECT-DICT
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - REJECT-200
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - REJECT-200
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad - REJECT-200
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 
 [Script]
 12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body=true, max-size=-1, timeout=60
+baiducloud = type=http-response, pattern=^https?:\/\/pan\.baidu\.com\/api\/getsyscfg, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, max-size=-1, timeout=60
+baiducloud = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, max-size=-1, timeout=60
 bilibili_json = type=http-response, pattern=^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
 bilibili_json1 = type=http-response, pattern=^https://app.bilibili.com/x/v2/search/square, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
 bilibili_json2 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bilibili_json.js, requires-body=true, max-size=-1, timeout=60
@@ -168,4 +173,4 @@ weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo
 weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_topic.json, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
