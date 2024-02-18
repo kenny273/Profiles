@@ -88,10 +88,14 @@ DOMAIN-SUFFIX,zbrushcn.com,REJECT
 DOMAIN-SUFFIX,zhzzx.com,REJECT
 
 [URL Rewrite]
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 ^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
 ^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) - REJECT
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - REJECT-200
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - REJECT-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - REJECT-200
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards - REJECT-DICT
 ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - REJECT-DICT
@@ -129,6 +133,7 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - REJECT-200
 ^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad - REJECT-200
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - REJECT-200
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 
@@ -189,6 +194,8 @@ weibo_json20 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.cn
 weibo_json21 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
 weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_info.json, timeout=60
 weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_topic.json, timeout=60
+youtube_request_beta = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
+youtube_response_beta = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, interface*.music.163.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, *.googlevideo.com, interface*.music.163.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
