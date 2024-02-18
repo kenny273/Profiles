@@ -21,6 +21,7 @@ DOMAIN-KEYWORD,pangolin,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
 DOMAIN-KEYWORD,pglstatp,REJECT
 DOMAIN-KEYWORD,-tos.pstatp.com,REJECT
+DOMAIN-KEYWORD,umengcloud,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
 DOMAIN-KEYWORD,volc,REJECT
 DOMAIN-SUFFIX,4009997658.com,REJECT
@@ -107,6 +108,7 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
 ^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash - REJECT
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - REJECT-200
+^https?:\/\/conf-darwin\.xycdn\.com - REJECT-DICT
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ - REJECT-DICT
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted - REJECT-DICT
 ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect - REJECT-DICT
@@ -134,6 +136,7 @@ DOMAIN-SUFFIX,zhzzx.com,REJECT
 ^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad - REJECT-200
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - REJECT-200
+^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - REJECT
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 
