@@ -136,6 +136,7 @@ coolapk1 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/de
 coolapk2 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
 coolapk3 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
 coolapk4 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+flightradar24=type=http-response,pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe),requires-body=1,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js
 lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
 mygolbus = type=http-response, pattern=https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhangshanggongjiao.js, requires-body=true, max-size=-1, timeout=60
 spotify_json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
@@ -167,4 +168,4 @@ weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo
 weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_topic.json, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mp.weixin.qq.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
