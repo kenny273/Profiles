@@ -1,21 +1,19 @@
-#!name=SRPolicies
-#!desc=SR策略补集
+#!name=SRScripts
+#!desc=SR策略补充模块
 
 [General]
-skip-proxy = %APPEND% captive.apple.com,e.crashlytics.com,gate.lagou.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,seed-sequoia.siri.apple.com,sequoia.apple.com,www.abchina.com.cn,www.baidu.com,www.shanbay.com,wxh.wo.cn,yunbusiness.ccb.com
+skip-proxy = %APPEND% captive.apple.com, e.crashlytics.com, gate.lagou.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, seed-sequoia.siri.apple.com, sequoia.apple.com, www.abchina.com.cn, www.baidu.com, www.shanbay.com, wxh.wo.cn, yunbusiness.ccb.com
 
 [Rule]
-DOMAIN,118.89.204.198,REJECT
+DOMAIN,ad.12306.cn,DIRECT
 DOMAIN,d.image.i4.cn,REJECT
-DOMAIN,emby.aca.best,🎥 Emby专线
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
 DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
 DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
 DOMAIN,im.tieba.baidu.com,REJECT
 DOMAIN,ntb.lanjie100.com,REJECT
-DOMAIN,porn.aca.best,🎥 Emby专线
 DOMAIN-KEYWORD,118.89.204.198,REJECT
-DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
 DOMAIN-KEYWORD,baihemob,REJECT
 DOMAIN-KEYWORD,beizi.biz,REJECT
@@ -66,7 +64,6 @@ DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-SUFFIX,mindmanager.cc,REJECT
 DOMAIN-SUFFIX,mindmanager.cn,REJECT
 DOMAIN-SUFFIX,mindmapper.cc,REJECT
-DOMAIN-SUFFIX,misakaf.org,🎥 Emby专线
 DOMAIN-SUFFIX,mycleanmymac.com,REJECT
 DOMAIN-SUFFIX,nicelabel.cc,REJECT
 DOMAIN-SUFFIX,ntfsformac.cc,REJECT
@@ -139,7 +136,10 @@ coolapk1 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/de
 coolapk2 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
 coolapk3 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
 coolapk4 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body=true, max-size=-1, timeout=60
+lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
 mygolbus = type=http-response, pattern=https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhangshanggongjiao.js, requires-body=true, max-size=-1, timeout=60
+spotify_json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+spotify_proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 wechat = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, requires-body=true, max-size=-1, timeout=60
 weibo_json = type=http-response, pattern=^https://api.weibo.cn/2/!/client/light_skin, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
 weibo_json1 = type=http-response, pattern=^https://new.vip.weibo.cn/littleskin/preview, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
@@ -167,4 +167,4 @@ weibo_search_info = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo
 weibo_search_topic = type=http-request, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_search_topic.json, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn,api.live.bilibili.com,api.vc.bilibili.com,api.bilibili.com,api.biliapi.net,bbs-api.miyoushe.com,*.bilibili.com,*.bilibili.*,*biliapi.net,manga.bilibili.com,grpc.biliapi.net,mp.weixin.qq.com,-broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, manga.bilibili.com, grpc.biliapi.net, mp.weixin.qq.com, photos.adobe.io, spclient.wg.spotify.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
