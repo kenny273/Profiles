@@ -20,7 +20,6 @@ DOMAIN-KEYWORD,beizi.biz,REJECT
 DOMAIN-KEYWORD,pglstatp,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
 DOMAIN-KEYWORD,volc,REJECT
-DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
@@ -43,24 +42,6 @@ DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 ^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash - REJECT
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - REJECT-200
 ^https?:\/\/conf-darwin\.xycdn\.com - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/ - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ios\/upgrade - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/position\/show\/resource - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/scene\/show\/resource - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default\/keyword - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/rcmd\/keyword - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/specialkeyword - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/sp\/flow - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/v1\/content\/exposure\/comment - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get - REJECT-DICT
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?eapi\/resource-exposure\/config - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight - REJECT-DICT
