@@ -24,7 +24,7 @@ DOMAIN-KEYWORD,volc,REJECT
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 ^https://api.bilibili.com/pgc/season/player/cards - REJECT-DICT
-^https://app.bilibili.com/x/v2/splash/show - REJECT-DICT
+^https://app.bilibili.com/x/v2/splash/ - REJECT-DICT
 ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default - REJECT
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) - REJECT
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - REJECT-200
