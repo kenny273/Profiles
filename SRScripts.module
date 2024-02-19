@@ -73,7 +73,6 @@ DOMAIN-SUFFIX,shark-tracer.netease.com,REJECT
 ^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - REJECT
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
-^https:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ - REJECT-200
 
 [Script]
 12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/main/Scripts/AdBlock/Other/12306.js, requires-body=true, max-size=-1, timeout=60
@@ -136,4 +135,4 @@ youtube_request_beta = type=http-request, pattern=^https?:\/\/youtubei\.googleap
 youtube_response_beta = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, *.googlevideo.com, interface*.music.163.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, ossgw.alicdn.com, pan.baidu.com, photos.adobe.io, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, *.googlevideo.com, interface*.music.163.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
