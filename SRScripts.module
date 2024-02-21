@@ -41,6 +41,8 @@ DOMAIN-KEYWORD,volc,REJECT
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - REJECT
 ^https?:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash - REJECT
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime - REJECT-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - REJECT
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit - REJECT
 ^https?:\/\/conf-darwin\.xycdn\.com - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily - REJECT-DICT
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? - REJECT-DICT
@@ -116,4 +118,4 @@ youtube_request_beta = type=http-request, pattern=^https?:\/\/youtubei\.googleap
 youtube_response_beta = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, *.googlevideo.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, client.app.coc.10086.cn, *.googlevideo.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
