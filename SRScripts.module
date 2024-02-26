@@ -57,6 +57,18 @@ DOMAIN-KEYWORD,volc,REJECT
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - REJECT
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - REJECT-DICT
 ^https?:\/\/res.kfc.com.cn\/advertisement\/ - REJECT-200
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome - REJECT-200
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - REJECT-200
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) - REJECT-IMG
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm - REJECT-DICT
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) - REJECT-IMG
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) - REJECT-IMG
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} - REJECT-IMG
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= - REJECT-IMG
+^https?+:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - REJECT-200
+^https?+:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - REJECT-200
+^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver - REJECT
+^https?:\/\/res\.app\.coc\.10086\.cn\/group\d\/M00\/[0-9]{2}\/[A-Z0-9]{2}\/.+.jpg - REJECT-200
 
 [Script]
 12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/main/Scripts/AdBlock/Other/12306.js, requires-body=true, max-size=-1, timeout=60
@@ -119,4 +131,4 @@ youtube_request_beta = type=http-request, pattern=^https?:\/\/youtubei\.googleap
 youtube_response_beta = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, requires-body=true, binary-body-mode=true, max-size=-1, timeout=60
 
 [MITM]
-hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, client.app.coc.10086.cn, *.googlevideo.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, res.kfc.com.cn, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
+hostname= %APPEND% ad.12306.cn, api.live.bilibili.com, api.vc.bilibili.com, api.bilibili.com, api.biliapi.net, bbs-api.miyoushe.com, *.bilibili.com, *.bilibili.*, *biliapi.net, client.app.coc.10086.cn, *.googlevideo.com, m.client.10010.com, manga.bilibili.com, grpc.biliapi.net, mobile.flightradar24.com, mp.weixin.qq.com, pan.baidu.com, photos.adobe.io, res.app.coc.10086.cn, res.kfc.com.cn, s.youtube.com, spclient.wg.spotify.com, www.youtube.com, youtubei.googleapis.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -redirector*.googlevideo.com, -*tracker*.biliapi.net
