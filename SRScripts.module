@@ -19,7 +19,6 @@ DOMAIN-KEYWORD,baihemob,REJECT
 DOMAIN-KEYWORD,beizi.biz,REJECT
 DOMAIN-KEYWORD,pglstatp,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-DOMAIN-KEYWORD,volc,REJECT
 
 [URL Rewrite]
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
