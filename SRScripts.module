@@ -24,8 +24,7 @@ DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
 ^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
 
 [Script]
-flightradar24=type=http-response,pattern=^https://mobile.flightradar24.com/mobile/(user-session|subscribe),requires-body=1,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js
 lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
 
 [MITM]
-hostname= %APPEND% mobile.flightradar24.com, photos.adobe.io
+hostname= %APPEND% photos.adobe.io
