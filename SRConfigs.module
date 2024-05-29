@@ -6,6 +6,7 @@ skip-proxy = %APPEND% captive.apple.com, e.crashlytics.com, gate.lagou.com, logi
 
 [Rule]
 DOMAIN,ad.12306.cn,DIRECT
+DOMAIN-KEYWORD,bing,PROXY
 DOMAIN,d.image.i4.cn,REJECT
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
 DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
