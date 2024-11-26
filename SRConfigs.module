@@ -6,7 +6,6 @@ skip-proxy = %APPEND% captive.apple.com, e.crashlytics.com, gate.lagou.com, logi
 
 [Rule]
 DOMAIN,ad.12306.cn,DIRECT
-DOMAIN-KEYWORD,bing,PROXY
 DOMAIN,d.image.i4.cn,REJECT
 DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
 DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
@@ -20,13 +19,3 @@ DOMAIN-KEYWORD,baihemob,REJECT
 DOMAIN-KEYWORD,beizi.biz,REJECT
 DOMAIN-KEYWORD,pglstatp,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-
-[URL Rewrite]
-^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet - REJECT-200 
-
-[Script]
-12306 = type=http-request,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Runeston/script/main/12306.js
-lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
-
-[MITM]
-hostname= %APPEND% ad.12306.cn, photos.adobe.io
