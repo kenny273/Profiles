@@ -6,7 +6,7 @@
 skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
 
 [Rule]
-DOMAIN-KEYWORD,acaisbest,策略选择
+DOMAIN-KEYWORD,dadada.acaisbest.com,策略选择
 
 [Rewrite]
 # > 掌上公交去广告
