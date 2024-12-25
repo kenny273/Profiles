@@ -5,7 +5,7 @@ proxy-providers:
     interval: 86400
     health-check: {enable: true,url: "http://www.google.com/generate_204",interval: 300}
     override:
-      additional-prefix: "[ACA] "
+      additional-prefix: "[provider1]"
 
   provider2:
     url: ""
@@ -13,7 +13,7 @@ proxy-providers:
     interval: 86400
     health-check: {enable: true,url: "http://www.google.com/generate_204",interval: 300}
     override:
-      additional-prefix: "[Aladdin] "
+      additional-prefix: "[provider2]"
 
 proxies: 
   - name: "直连"
