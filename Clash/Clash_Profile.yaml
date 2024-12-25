@@ -15,11 +15,6 @@ proxy-providers:
     override:
       additional-prefix: "[provider2]"
 
-proxies: 
-  - name: "直连"
-    type: direct
-    udp: true
-
 mixed-port: 7890
 ipv6: true
 allow-lan: true
