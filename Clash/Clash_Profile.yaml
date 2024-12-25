@@ -179,7 +179,7 @@ proxy-groups:
   - name: 其他节点
     type: select
     include-all: true
-    filter: "^((?!(香港|HK|(?i)Hong|台湾|TW|(?i)Taiwan|日本|JP|(?i)Japan|韩国|KR|(?i)Korea|新加坡|狮城|獅城|SG|(?i)Singapore|美国|US|(?i)States|American|英国|UK|(?i)Kingdom|English|Emby|emby|奈飞|NF|流量|天|到期|Expire|官网|总计)).)*$"
+    filter: "^((?!(香港|HK|Hong|台湾|TW|Tai|日本|川日|泉日|埼玉|沪日|深日|JP|Japan|韩国|韓國|首尔|KR|Korea|KOR|新加坡|坡|狮城|SG|Singapore|美国|US|United States|英国|UK|(?i)Kingdom|English|Emby|emby|奈飞|NF|流量|天|到期|Expire|官网|总计)).)*$"
 
   - name: 全部节点
     type: select
