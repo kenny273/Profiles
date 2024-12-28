@@ -20,9 +20,13 @@ ipv6: true
 allow-lan: true
 unified-delay: false
 tcp-concurrent: true
-external-controller: 127.0.0.1:9090
-external-ui: ui
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+geox-url:
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+geo-auto-update: true
+geo-update-interval: 24
 
 find-process-mode: strict
 global-client-fingerprint: chrome
@@ -66,56 +70,84 @@ dns:
     - "+.local"
     - "+.market.xiaomi.com"
   nameserver:
-    - https://120.53.53.53/dns-query
+    - h3://223.5.5.5/dns-query
+    - h3://223.6.6.6/dns-query
     - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+    - h3://8.8.8.8/dns-query
+    - h3://8.8.4.4/dns-query
+    - h3://1.1.1.1/dns-query
+    - h3://1.0.0.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://8.8.4.4/dns-query
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
   proxy-server-nameserver:
-    - https://120.53.53.53/dns-query
+    - h3://8.8.8.8/dns-query
+    - h3://8.8.4.4/dns-query
+    - h3://1.1.1.1/dns-query
+    - h3://1.0.0.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://8.8.4.4/dns-query
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+  direct-nameserver:
+    - system
+    - h3://223.5.5.5/dns-query
+    - h3://223.6.6.6/dns-query
     - https://223.5.5.5/dns-query
-  nameserver-policy:
-    "rule-set:chinamax_domain,private_domain":
-      - https://120.53.53.53/dns-query
-      - https://223.5.5.5/dns-query
-
+    - https://223.6.6.6/dns-query
+      
 proxy-groups:
-
-  - name: 策略选择
+  - name: 🐱 策略选择
     type: select
-    proxies: [自动选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点]
+    proxies: [🔀 自动选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,DIRECT]
 
-  - name: Google
+  - name: Bahamut
     type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
 
-  - name: Telegram
+  - name: BilibiliIntl
     type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
-
-  - name: Twitter
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    
+  - name: Bing
     type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
-
-  - name: 巴哈姆特
-    type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
-
-  - name: YouTube
-    type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
-
-  - name: NETFLIX
-    type: select
-    proxies: [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
-
-  - name: Spotify
-    type: select
-    proxies:  [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
 
   - name: Github
     type: select
-    proxies:  [策略选择,香港节点,台湾节点,新加坡节点,日本节点,韩国节点,美国节点,其他节点,全部节点,自动选择]
+    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
 
-  #下面是地区分组
-  - name: 香港节点
+  - name: Google
+    type: select
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+
+  - name: NETFLIX
+    type: select
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+
+  - name: Pixiv
+    type: select
+    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    
+  - name: Spotify
+    type: select
+    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    
+  - name: Telegram
+    type: select
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+
+  - name: Twitter
+    type: select
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+
+  - name: YouTube
+    type: select
+    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    
+  - name: 🇭🇰 香港节点
     type: url-test
     interval: 120
     lazy: true
@@ -123,7 +155,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(香港|HK|Hong)"
 
-  - name: 台湾节点
+  - name: 🇨🇳 台湾节点
     type: url-test    
     interval: 120
     lazy: true
@@ -131,7 +163,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(台湾|TW|Tai)"
 
-  - name: 新加坡节点
+  - name: 🇸🇬 新加坡节点
     type: url-test
     interval: 120
     lazy: true
@@ -139,7 +171,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(新加坡|坡|狮城|SG|Singapore)"
 
-  - name: 日本节点
+  - name: 🇯🇵 日本节点
     type: url-test
     interval: 120
     lazy: true
@@ -147,7 +179,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
 
-  - name: 韩国节点
+  - name: 🇰🇷 韩国节点
     type: url-test
     interval: 120
     lazy: true
@@ -155,7 +187,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(韩国|韓國|首尔|KR|Korea|KOR)"
 
-  - name: 美国节点
+  - name: 🇺🇸 美国节点
     type: url-test
     interval: 120
     lazy: true
@@ -163,7 +195,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(美国|US|United States)"
 
-  - name: 英国节点
+  - name: 🇬🇧 英国节点
     type: url-test
     interval: 120
     lazy: true
@@ -171,17 +203,17 @@ proxy-groups:
     include-all: true
     filter: "(?i)(英国|UK|(?i)Kingdom|English)"
 
-  - name: 其他节点
+  - name: 🌏️ 其他节点
     type: select
     include-all: true
-    filter: "^((?!(香港|HK|Hong|台湾|TW|Tai|日本|川日|泉日|埼玉|沪日|深日|JP|Japan|韩国|韓國|首尔|KR|Korea|KOR|新加坡|坡|狮城|SG|Singapore|美国|US|United States|英国|UK|(?i)Kingdom|English|Emby|emby|奈飞|NF|流量|天|到期|Expire|官网|总计)).)*$"
+    filter: "^((?!(香港|HK|(?i)Hong|台湾|TW|(?i)Taiwan|日本|JP|(?i)Japan|韩国|KR|(?i)Korea|新加坡|狮城|獅城|SG|(?i)Singapore|美国|US|(?i)States|American|英国|UK|(?i)Kingdom|English|Emby|emby|奈飞|NF|流量|天|到期|Expire|官网|总计)).)*$"
 
-  - name: 全部节点
+  - name: 🌐 全部节点
     type: select
     include-all: true
     filter: "^((?!(流量|天|到期|Expire|官网|总计)).)*$"
     
-  - name: 自动选择
+  - name: 🔀 自动选择
     type: url-test
     include-all: true
     tolerance: 10
@@ -189,81 +221,58 @@ proxy-groups:
     
 rules:
   - RULE-SET,advertising_classical,REJECT
-  - RULE-SET,private_classical,REJECT
-  - RULE-SET,bahamut_classical,巴哈姆特
-  - RULE-SET,github_classical,Github
-  - RULE-SET,google_classical,Google
-  - RULE-SET,netflix_classical,NETFLIX
-  - RULE-SET,spotify_classical,Spotify
-  - RULE-SET,twitter_classical,Twitter
-  - RULE-SET,telegram_classical,Telegram
-  - RULE-SET,youtube_classical,YouTube
-  - RULE-SET,chinamax_classical,DIRECT
-
   - RULE-SET,advertising_domain,REJECT
-  - RULE-SET,private_domain,REJECT
-  - RULE-SET,chinamax_domain,DIRECT
+  - RULE-SET,bahamut_classical,Bahamut
+  - RULE-SET,github_classical,Github
+  - RULE-SET,spotify_classical,Spotify
+  - RULE-SET,bing_classical,Bing
   
-  - RULE-SET,netflix_ip,NETFLIX
-  - RULE-SET,chinamax_ip,DIRECT
-  - GEOIP,CN,DIRECT 
-  - MATCH,策略选择
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,private,DIRECT
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,google,Google
+  - GEOSITE,twitter,Twitter
+  - GEOSITE,pixiv,Pixiv
+  - GEOSITE,category-scholar-!cn,🐱 策略选择
+  - GEOSITE,biliintl,BilibiliIntl
+  - GEOSITE,onedrive,DIRECT
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,geolocation-!cn,🐱 策略选择
+  - GEOSITE,cn,DIRECT
+
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOIP,telegram,Telegram
+  - GEOIP,JP,🇯🇵 日本节点
+  - GEOIP,CN,DIRECT
+  
+  - DST-PORT,80/8080/443/8443,🐱 策略选择  
+  - MATCH,🐱 策略选择
   
 rule-anchor:
   classical: &classical {type: http, interval: 86400, behavior: classical, format: yaml}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: yaml}
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: yaml}
+  
 rule-providers:
-  private_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml"
   advertising_classical:
     <<: *classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml"
-  chinamax_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml"
-  github_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
-  twitter_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
-  youtube_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
-  google_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
-  telegram_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
-  netflix_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
   bahamut_classical:
     <<: *classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml"
+  bing_classical:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml"
+  github_classical:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
   spotify_classical:
     <<: *classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
-  pixiv_classical:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml"
         
-  private_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml"
   advertising_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
-  chinamax_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.yaml"
-
-  chinamax_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_IP.yaml"
-  netflix_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_IP.yaml"
