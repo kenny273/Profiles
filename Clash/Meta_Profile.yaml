@@ -99,55 +99,55 @@ dns:
     - https://223.6.6.6/dns-query
       
 proxy-groups:
-  - name: 🐱 策略选择
+  - name:  策略选择
     type: select
-    proxies: [🔀 自动选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,DIRECT]
+    proxies: [ 自动选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点,DIRECT]
 
   - name: Bahamut
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: BilibiliIntl
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
     
   - name: Bing
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: Github
     type: select
-    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies:  [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: Google
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: NETFLIX
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: Pixiv
     type: select
-    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies:  [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
     
   - name: Spotify
     type: select
-    proxies:  [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies:  [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
     
   - name: Telegram
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: Twitter
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
 
   - name: YouTube
     type: select
-    proxies: [🐱 策略选择,🇭🇰 香港节点,🇨🇳 台湾节点,🇸🇬 新加坡节点,🇯🇵 日本节点,🇰🇷 韩国节点,🇺🇸 美国节点,🇬🇧 英国节点,🌏️ 其他节点,🌐 全部节点,🔀 自动选择,DIRECT]
+    proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
     
-  - name: 🇭🇰 香港节点
+  - name:  香港节点
     type: url-test
     interval: 120
     lazy: true
@@ -155,7 +155,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(香港|HK|Hong)"
 
-  - name: 🇨🇳 台湾节点
+  - name:  台湾节点
     type: url-test    
     interval: 120
     lazy: true
@@ -163,7 +163,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(台湾|TW|Tai)"
 
-  - name: 🇸🇬 新加坡节点
+  - name:  新加坡节点
     type: url-test
     interval: 120
     lazy: true
@@ -171,7 +171,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(新加坡|坡|狮城|SG|Singapore)"
 
-  - name: 🇯🇵 日本节点
+  - name:  日本节点
     type: url-test
     interval: 120
     lazy: true
@@ -179,7 +179,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
 
-  - name: 🇰🇷 韩国节点
+  - name:  韩国节点
     type: url-test
     interval: 120
     lazy: true
@@ -187,7 +187,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(韩国|韓國|首尔|KR|Korea|KOR)"
 
-  - name: 🇺🇸 美国节点
+  - name:  美国节点
     type: url-test
     interval: 120
     lazy: true
@@ -195,7 +195,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)(美国|US|United States)"
 
-  - name: 🇬🇧 英国节点
+  - name:  英国节点
     type: url-test
     interval: 120
     lazy: true
@@ -203,23 +203,29 @@ proxy-groups:
     include-all: true
     filter: "(?i)(英国|UK|(?i)Kingdom|English)"
 
-  - name: 🌏️ 其他节点
+  - name: ️ 其他节点
     type: select
     include-all: true
     filter: "^((?!(香港|HK|(?i)Hong|台湾|TW|(?i)Taiwan|日本|JP|(?i)Japan|韩国|KR|(?i)Korea|新加坡|狮城|獅城|SG|(?i)Singapore|美国|US|(?i)States|American|英国|UK|(?i)Kingdom|English|Emby|emby|奈飞|NF|流量|天|到期|Expire|官网|总计)).)*$"
 
-  - name: 🌐 全部节点
+  - name:  全部节点
     type: select
     include-all: true
     filter: "^((?!(流量|天|到期|Expire|官网|总计)).)*$"
     
-  - name: 🔀 自动选择
+  - name:  自动选择
     type: url-test
     include-all: true
     tolerance: 10
     filter: "^((?!(流量|天|到期|Expire|官网|总计|奈飞|NF|Emby|emby)).)*$"
     
 rules:
+  - DOMAIN-SUFFIX,adobe.com,DIRECT
+  - DOMAIN-SUFFIX,adobe.net,DIRECT
+  - DOMAIN-SUFFIX,adobe.cn,DIRECT
+  - DOMAIN-SUFFIX,adobe.io,DIRECT
+  - DOMAIN-SUFFIX,adobe.com.cn,DIRECT
+  
   - RULE-SET,advertising_classical,REJECT
   - RULE-SET,advertising_domain,REJECT
   - RULE-SET,bahamut_classical,Bahamut
@@ -233,23 +239,23 @@ rules:
   - GEOSITE,google,Google
   - GEOSITE,twitter,Twitter
   - GEOSITE,pixiv,Pixiv
-  - GEOSITE,category-scholar-!cn,🐱 策略选择
+  - GEOSITE,category-scholar-!cn, 策略选择
   - GEOSITE,biliintl,BilibiliIntl
   - GEOSITE,onedrive,DIRECT
   - GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,steam@cn,DIRECT
   - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,geolocation-!cn,🐱 策略选择
+  - GEOSITE,geolocation-!cn, 策略选择
   - GEOSITE,cn,DIRECT
 
   - GEOIP,private,DIRECT,no-resolve
   - GEOIP,telegram,Telegram
-  - GEOIP,JP,🇯🇵 日本节点
+  - GEOIP,JP, 日本节点
   - GEOIP,CN,DIRECT
   
-  - DST-PORT,80/8080/443/8443,🐱 策略选择  
-  - MATCH,🐱 策略选择
+  - DST-PORT,80/8080/443/8443, 策略选择  
+  - MATCH, 策略选择
   
 rule-anchor:
   classical: &classical {type: http, interval: 86400, behavior: classical, format: yaml}
