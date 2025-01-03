@@ -148,61 +148,40 @@ proxy-groups:
     proxies: [ 策略选择, 香港节点, 台湾节点, 新加坡节点, 日本节点, 韩国节点, 美国节点, 英国节点,️ 其他节点, 全部节点, 自动选择,DIRECT]
     
   - name:  香港节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(香港|HK|Hong)"
 
   - name:  台湾节点
-    type: url-test    
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select    
     include-all: true
     filter: "(?i)(台湾|TW|Tai)"
 
   - name:  新加坡节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(新加坡|坡|狮城|SG|Singapore)"
 
   - name:  日本节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
 
   - name:  韩国节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(韩国|韓國|首尔|KR|Korea|KOR)"
 
   - name:  美国节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(美国|US|United States)"
 
   - name:  英国节点
-    type: url-test
-    interval: 120
-    lazy: true
-    tolerance: 100
+    type: select
     include-all: true
     filter: "(?i)(英国|UK|(?i)Kingdom|English)"
-
+    
   - name: ️ 其他节点
     type: select
     include-all: true
@@ -223,8 +202,10 @@ rules:
   - DOMAIN-SUFFIX,adobe.com,DIRECT
   - DOMAIN-SUFFIX,adobe.net,DIRECT
   - DOMAIN-SUFFIX,adobe.cn,DIRECT
-  - DOMAIN-SUFFIX,adobe.io,DIRECT
+  - DOMAIN-SUFFIX,adobe.io,REJECT
   - DOMAIN-SUFFIX,adobe.com.cn,DIRECT
+  - DOMAIN-SUFFIX,jellyfin.asia, 全部节点
+  - DOMAIN-KEYWORD,misakaf, 全部节点
   
   - RULE-SET,advertising_classical,REJECT
   - RULE-SET,advertising_domain,REJECT
